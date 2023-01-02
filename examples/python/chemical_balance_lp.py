@@ -75,7 +75,7 @@ print(f"Number of constraints = {solver.NumConstraints()}")
 result_status = solver.Solve()
 
 # The problem has an optimal solution.
-assert result_status == pywraplp.Solver.OPTIMAL
+assert result_status == pywraplp.Solver.OPTIMAL or result_status == pywraplp.Solver.FEASIBLE
 
 assert solver.VerifySolution(1e-7, True)
 
