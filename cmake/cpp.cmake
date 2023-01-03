@@ -74,6 +74,7 @@ endif()
 if(MSVC)
   list(APPEND OR_TOOLS_COMPILE_OPTIONS
     "/bigobj" # Allow big object
+    "/fp:strict" # Follow IEEE-754 spec
     "/DNOMINMAX"
     "/DWIN32_LEAN_AND_MEAN=1"
     "/D_CRT_SECURE_NO_WARNINGS"
